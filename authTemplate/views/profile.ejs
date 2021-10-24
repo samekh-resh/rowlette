@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Welcome <%= user.local.email[0].toUpperCase() +  user.local.email.slice(1) %>'s page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <% if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%= user._id %><br>
+                        <strong>email</strong>: <%= user.local.email %><br>
+                        <strong>password</strong>: <%= user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <% } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <% } %>
+
+            </div>
+        </div>
+        <!-- Wins, losses, total, money won, money lost for each round -->
+        <div class="col-sm-6">
+          <h2>Players</h2>
+          <ul class="messages">
+            <% for(var i=0; i<messages.length; i++) {%>
+            <li class="message">
+              <span><%= messages[i].wins %></span>
+              <span><%= messages[i].losses %></span>
+              <span><%= messages[i].total %></span>
+              <span><%= messages[i].moneyWon %></span>
+              <span><%= messages[i].moneyLost %></span>
+            </li>
+            <% } %>
+          </ul>
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>
