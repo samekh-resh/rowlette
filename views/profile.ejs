@@ -1,0 +1,82 @@
+<!doctype html>
+<html>
+<head>
+    <title>Roulette</title>
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/bootstrap/3.0.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <link rel="stylesheet" href="profile.css">
+
+</head>
+<body>
+<div class="container">
+
+    <div class="page-header text-center">
+        <h1><span class="fa fa-anchor"></span> Welcome <%= user.local.email[0].toUpperCase() +  user.local.email.slice(1) %>'s page</h1>
+        <a href="/logout" class="btn btn-default btn-sm">Logout</a>
+    </div>
+
+    <div class="row">
+
+        <!-- LOCAL INFORMATION -->
+        <!-- <div class="col-sm-6">
+            <div class="well">
+                <h3><span class="fa fa-user"></span> Local</h3>
+
+                <%# if (user.local.email) { %>
+                    <p>
+                        <strong>id</strong>: <%# user._id %><br>
+                        <strong>email</strong>: <%# user.local.email %><br>
+                        <strong>password</strong>: <%# user.local.password %>
+                    </p>
+
+                    <a href="/unlink/local" class="btn btn-default">Unlink</a>
+                <%# } else { %>
+                    <a href="/connect/local" class="btn btn-default">Connect Local</a>
+                <%# } %>
+
+            </div>
+        </div> -->
+        <!-- Wins, losses, total, money won, money lost for each round -->
+        <div class="col-sm-6 playerBox">
+          <h2>Players</h2>
+          <ol class="individualPlayers">
+            <% for(var i=0; i<bets.length; i++) {%>
+            <li class="message">
+              <span class='boxes'>Player Wins: <%= bets[i].wins %></span>
+              <span class='boxes'> <%= bets[i].losses %></span>
+              <span class='boxes'><%= bets[i].total %></span>
+              <span class='boxes'><%= bets[i].moneyWon %></span>
+              <span class='boxes'><%= bets[i].moneyLost %></span>
+              <span class='boxes'><i id="<%= bets[i]._id %>" class="fa fa-dumpster"></i></span>
+            </li>
+            <% } %>
+          </ol>
+<!-- use this text in place of the span and boxes.  -->
+          <!-- <table style="width:100%">
+            <tr>
+              <th>bets</th>
+              <th>wins</th>
+              <th>money won</th>
+              <th>money lost</th>
+              <th>total money used</th>
+            </tr>
+            <tr class='forBets'>
+              <td id='bet'> # of bets made</td>
+              <td id='wins'>number of wins</td>
+              <td id='moneyWon'>money won</td>
+              <td id='moneyLost'>money Lost</td>
+              <td id='totalMoney'>total</td>
+            </tr> -->
+          </table>
+          <!-- i want to style these as little boxes of information and not as a list element -->
+
+          <button><a href="/gamePage">go to game page</a></button>
+          
+</div>
+
+<script src="main.js"></script>
+
+</body>
+</html>

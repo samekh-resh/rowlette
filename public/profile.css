@@ -1,0 +1,43 @@
+@keyframes profilePage {
+  0% {
+    background-color: red;
+  }
+  25% {
+    background-color: teal;
+  }
+  50% {
+    background-color: lightcoral;
+  }
+  75% {
+    background-color: mediumorchid;
+  }
+  100% {
+    background-color: firebrick;
+  }
+}
+
+/* The element to apply the animation to */
+body {
+  animation: profilePage 10s infinite;
+  color: white;
+  text-align: center;
+}
+
+.playerBox {
+  border: 1px solid black;
+  width: 100%;
+  height: 100%;
+  padding: 3%;
+  border-radius: 10% / 50%;
+  margin: 10px;
+  position: relative;
+  overflow: hidden;
+  background: rgba(141, 33, 18, 0.829);
+  width: 500px;
+}
+
+.individualPlayers {
+  border: 1px black solid;
+  border-radius: 30px;
+  background: rgb(155, 96, 54);
+}

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>The Roulette Board</title>
+    <link rel="stylesheet" href="gamePage.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h1 class='shadow'>PokéRowlette</h1>
+
+    <!-- declare a variable for the continaer 2) run a foreach on the container 3)check for e.target for the choice of the players game bet 
+    
+    three buttons a button for bet amount for the color, randomization on the back end bet as an input of a color-->
+
+    <div class="container">
+      <section class='shadow'><img src="img/bulba.jpg" id="bulbasaur" /></section>
+      <section class='shadow'><img src="img/shuppet.jpg" id="shuppet" /></section>
+      <section class='shadow'><img src="img/charizard.jpg" id="charizard" /></section>
+    </div>
+
+    <section class="results shadow">
+      <div>
+        <!-- <form action="/bets" method="POST" class="form-group"> -->
+        <label for="bet">How much you wanna bet?</label>
+        <input
+          type="number"
+          name="bet"
+          id="bet"
+          placeholder="$2121"
+          class="form-control"
+        />
+        <!-- </form> -->
+      </div>
+      <h3>Winner or Looser?</h3>
+
+      <div>
+        <label for="youWon">what's your winnings?</label>
+        <p class="youWon"></p>
+      </div>
+      <section class="forSpacing"></section>
+
+      <div>
+        <label for="youLost">what'd ya lose?</label>
+        <p class="youLost"></p>
+      </div>
+
+      <section class="forSpacing"></section>
+
+      <div>
+        <label for="yourTotal">how much ya got?</label>
+        <p class="yourTotal"></p>
+      </div>
+    </section>
+
+    <button><a href="/">home</a></button>
+    <button><a href="/profile">admin</a></button>
+    <script src="main.js"></script>
+  </body>
+</html>

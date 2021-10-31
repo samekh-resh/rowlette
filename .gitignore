@@ -1,0 +1,21 @@
+lib-cov
+*.seed
+*.log
+*.csv
+*.dat
+*.out
+*.pid
+*.gz
+
+pids
+logs
+results
+
+npm-debug.log
+node_modules
+
+
+
+issues with this app?
+it's giving me the resuts of each round as a new docment, when really I just want to continuously update the document
+should I put an input that has you claim your player name?

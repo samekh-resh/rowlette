@@ -1,0 +1,83 @@
+@keyframes pokeRoulette {
+  0% {
+    background-color: bisque;
+  }
+  25% {
+    background-color: teal;
+  }
+  50% {
+    background-color: aliceblue;
+  }
+  75% {
+    background-color: mediumorchid;
+  }
+  100% {
+    background-color: honeydew;
+  }
+}
+
+/* The element to apply the animation to */
+body {
+  animation: pokeRoulette 10s infinite;
+}
+
+.container {
+  display: flex;
+}
+.container section {
+  flex: 1;
+  /* border: pink 10px solid; */
+  margin: 10px;
+}
+input {
+  display: block;
+  margin: auto;
+  position:relative;
+  top:20px;
+}
+
+img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.shadow{
+  box-shadow: 5px 5px 5px rgba(157, 255, 0, 0.658);
+}
+.results,
+h1 {
+  margin: auto;
+  width: 20%;
+  text-align: center;
+}
+.results div{
+  border: 10px transparent black;
+  width: 200px;
+  height: 75px;
+  background-image: url(img/meowthWon.jpg);
+  background-size: cover;
+  color:white;
+  margin: auto;
+  background-color: rgba(255, 255, 255, 0.719);
+  padding: 7%;
+  border-radius: 25px;
+}
+
+.forSpacing{
+  height: 20px;
+}
+label{
+  background:rgba(255, 255, 255, 0.479);
+  color:black;
+  padding: 5%;
+  border-radius: 25%;
+}
+
+p{
+  background:rgba(255, 255, 255, 0.479);
+  color:black;
+  padding: 5%;
+  border-radius: 25px;
+  height: 30px;
+}
