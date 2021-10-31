@@ -3,8 +3,10 @@
 **link to project**
 
 
-!()[shot1.png]
-!()[shot2.png]
+
+![](shot2.png)
+![](shot1.png)
+
 ### How It’s Made
 Utilizing the express.js framework and some other node dependencies, we created three options to choose from to bet (red, green, black). The computer randomly selects one of the three options, via a randomizer. 
 
