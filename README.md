@@ -12,7 +12,7 @@ Utilizing the express.js framework and some other node dependencies, we created 
 
 
 <b>Langs used</b>
-Using Express.js, Node.js, Javascript, HTML5, CSS3,
+Using Express.js, Node.js, Javascript, HTML5, CSS3, and bootstrap
 
 ### optimizations
 Optimizations. 
